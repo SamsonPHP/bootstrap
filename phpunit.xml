@@ -12,7 +12,7 @@
 >
     <testsuites>
         <testsuite name="SamsonCMS Api Test Case">
-            <directory>./tests/</directory>
+            <directory>./ci/tests/</directory>
         </testsuite>
     </testsuites>
 
