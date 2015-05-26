@@ -1,12 +1,11 @@
 #SamsonPHP Bootstrap
 
-[![Latest Stable Version](https://poser.pugx.org/samsonos/htmlappv/stable.svg)](https://packagist.org/packages/samsonos/htmlapp)
-[![Build Status](https://scrutinizer-ci.com/g/samsonos/htmlappbadges/build.png?b=master)](https://scrutinizer-ci.com/g/samsonos/htmlappbuild-status/master)
-[![Code Coverage](https://scrutinizer-ci.com/g/samsonos/htmlappbadges/coverage.png?b=master)](https://scrutinizer-ci.com/g/samsonos/htmlapp?branch=master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/samsonos/htmlappbadges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/samsonos/htmlapp?branch=master) 
-[![Total Downloads](https://poser.pugx.org/samsonos/htmlappdownloads.svg)](https://packagist.org/packages/samsonos/htmlapp)
-[![Stories in Ready](https://badge.waffle.io/samsonos/htmlapp.png?label=ready&title=Ready)](https://waffle.io/samsonos/htmlapp)
-
+[![Latest Stable Version](https://poser.pugx.org/samsonphp/bootstrap/v/stable.svg)](https://packagist.org/packages/samsonphp/bootstrap)
+[![Build Status](https://scrutinizer-ci.com/g/samsonphp/bootstrap/badges/build.png?b=master)](https://scrutinizer-ci.com/g/samsonphp/bootstrap/build-status/master)
+[![Code Coverage](https://scrutinizer-ci.com/g/samsonphp/bootstrap/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/samsonphp/bootstrap/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/samsonphp/bootstrap/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/samsonphp/bootstrap/?branch=master) 
+[![Total Downloads](https://poser.pugx.org/samsonphp/bootstrap/downloads.svg)](https://packagist.org/packages/samsonphp/bootstrap)
+[![Stories in Ready](https://badge.waffle.io/samsonphp/bootstrap.png?label=ready&title=Ready)](https://waffle.io/samsonphp/bootstrap)
 
 #Installation
 First of all you must get [Composer](http://getcomposer.org) working on your system.
