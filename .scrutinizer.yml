@@ -48,4 +48,8 @@ build:
           # change to your actual testing domain
           host: 'test.local'
 
+  tests:
+    override:
+      - 'vendor/bin/behat -p test'
+      - 'vendor/bin/phpunit --coverage-clover=coverage.clover --coverage-text'
 
