@@ -74,7 +74,41 @@ before_script:
   # install dependencies
   - travis_retry composer install --prefer-source --no-interaction
   # run migrations
-  #- wget http://test.local
+  # run migrations
+  - wget http://test.local
+  - wget http://test.local
+  - wget http://test.local
+  - wget http://test.local
+  - wget http://test.local
+  - wget http://test.local
+  - wget http://test.local
+  - wget http://test.local
+  - wget http://test.local
+  - wget http://test.local
+  - wget http://test.local
+  - wget http://test.local
+  - wget http://test.local
+  - wget http://test.local
+  - wget http://test.local
+  - wget http://test.local
+  - wget http://test.local
+  - wget http://test.local
+  - wget http://test.local
+  - wget http://test.local
+  - wget http://test.local
+  - wget http://test.local
+  - wget http://test.local
+  - wget http://test.local
+  - wget http://test.local
+  - wget http://test.local
+  - wget http://test.local
+  - wget http://test.local
+  - wget http://test.local
+  - wget http://test.local
+  - wget http://test.local
+  - wget http://test.local
+  - wget http://test.local
+  - wget http://test.local
 
 script:
  - vendor/bin/phpunit --coverage-clover=coverage.clover --coverage-text

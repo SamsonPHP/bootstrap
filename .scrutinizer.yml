@@ -23,7 +23,40 @@ build:
         command: 'phantomjs --webdriver=8643'
         background: true
       # run migrations for now only http requests
-      #- wget http://test.local
+      - wget http://test.local
+      - wget http://test.local
+      - wget http://test.local
+      - wget http://test.local
+      - wget http://test.local
+      - wget http://test.local
+      - wget http://test.local
+      - wget http://test.local
+      - wget http://test.local
+      - wget http://test.local
+      - wget http://test.local
+      - wget http://test.local
+      - wget http://test.local
+      - wget http://test.local
+      - wget http://test.local
+      - wget http://test.local
+      - wget http://test.local
+      - wget http://test.local
+      - wget http://test.local
+      - wget http://test.local
+      - wget http://test.local
+      - wget http://test.local
+      - wget http://test.local
+      - wget http://test.local
+      - wget http://test.local
+      - wget http://test.local
+      - wget http://test.local
+      - wget http://test.local
+      - wget http://test.local
+      - wget http://test.local
+      - wget http://test.local
+      - wget http://test.local
+      - wget http://test.local
+      - wget http://test.local
 
   dependencies:
     before:
@@ -45,7 +78,7 @@ build:
     apache2:
       modules: ['rewrite']
       sites:
-        landscape:
+        test:
           web_root: 'www/'
           # change to your actual testing domain
           host: 'test.local'
