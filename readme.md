@@ -12,12 +12,12 @@ First of all you must get [Composer](http://getcomposer.org) working on your sys
 
 For automatic installation of SamsonPHP application and all of its dependencies use:
 ```shell
-php composer.phar create-project --prefer-dist -s dev samsonos/htmlapp [your_path]
+php composer.phar create-project --prefer-dist -s dev samsonphp/bootstrap [your_path]
 ``` 
 
 If you have installed composer globally you should use: 
 ```shell
-composer create-project --prefer-dist -s dev samsonos/htmlapp [your_path]
+composer create-project --prefer-dist -s dev samsonphp/bootstrap [your_path]
 ```
 
 #What next?
