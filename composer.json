@@ -7,8 +7,6 @@
   },
   "licence": "Open Software License (OSL) v 3.0",
   "minimum-stability": "dev",
-  "require": {
-  },
   "require-dev": {
     "samsonos/php_core": "*",
     "samsonos/php_resourcer": "*",
