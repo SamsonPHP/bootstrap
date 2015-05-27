@@ -5,7 +5,7 @@ namespace tests;
  * Created by Vitaly Iegorov <egorov@samsonos.com>
  * on 04.08.14 at 16:42
  */
-class CMSMainTest extends PHPUnit_Framework_TestCase
+class CMSMainTest extends \PHPUnit_Framework_TestCase
 {
     public function testPushAndPop()
     {

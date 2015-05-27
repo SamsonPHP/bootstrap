@@ -6,3 +6,6 @@ Feature: SamsonPHP test feature
   Background:
     Given I am on homepage
     And print last response
+
+  Scenario:
+    And I see "This is main page view"
