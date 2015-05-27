@@ -8,4 +8,4 @@ Feature: SamsonPHP test feature
     And print last response
 
   Scenario:
-    And I see "This is main page view"
+    Then I should see "This is main page view"
