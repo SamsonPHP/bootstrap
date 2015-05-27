@@ -18,7 +18,7 @@ php:
 
 env:
   global:
-    - APPLICATION_ENV=travis
+    - APPLICATION_ENV=test
 
 matrix:
   allow_failures:
@@ -78,7 +78,7 @@ before_script:
 
 script:
  - bin/phpunit --coverage-clover=coverage.clover --coverage-text
- - vendor/bin/behat -p travis
+ - vendor/bin/behat -p test
 
 after_failure:
   - sudo tail /var/log/apache2/error.log

@@ -36,7 +36,7 @@ build:
     php:
       version: 5.5
     variables:
-        APPLICATION_ENV: ci
+        APPLICATION_ENV: test
     hosts:
       # change to your actual testing domain
       test.local: '127.0.0.1'
