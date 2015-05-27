@@ -8,8 +8,8 @@ namespace samsonphp\config\ci;
 /** Test ActiveRecord configuration for development */
 class ActiveRecordConfig extends \samsonphp\config\Entity
 {
-    public $name = 'samsoncms';
-    public $login = 'samsoncms';
-    public $pwd = 'samsoncms';
+    public $name = 'test';
+    public $login = 'test';
+    public $pwd = 'test';
 }
 
