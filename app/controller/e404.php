@@ -9,5 +9,5 @@
 /** E404 - Page not found controller action */
 function e404__handler()
 {
-    $this->view('e404')->title('Page not found');
+    m()->view('e404')->title('Page not found');
 }

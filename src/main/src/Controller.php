@@ -13,7 +13,7 @@ class Controller extends CompressableExternalModule
 	protected $id = 'main';
 
     /** Universal main controller action */
-    function __handler()
+    public function __handler()
     {
         $this->view('index')->title('Main page');
     }

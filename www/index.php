@@ -1,5 +1,4 @@
-<?php
-/** SamsonPHP init script */
+<?php /** SamsonPHP init script */
 
 /** Set default locale to - Russian */
 define('DEFAULT_LOCALE', 'ru');

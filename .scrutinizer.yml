@@ -12,6 +12,7 @@ tools:
 
 filter:
     excluded_paths:
+        - 'ci/*'
         - 'tests/*'
         - 'fixtures/*'
         - 'features/*'

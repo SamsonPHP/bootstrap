@@ -9,5 +9,5 @@ namespace samsonphp;
 /** Compressor configuration entity */
 class CompressorConfig extends \samsonphp\config\Entity
 {
-    public $output = '';
+    public $output = 'www/output/';
 }

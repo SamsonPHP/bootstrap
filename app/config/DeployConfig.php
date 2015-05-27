@@ -9,8 +9,8 @@ namespace samsonphp;
 /** Deploy configuration entity */
 class DeployConfig extends \samsonphp\config\Entity
 {
-    public $host 	= '';
-    public $wwwroot	= '';
-    public $username= '';
-    public $password= '';
+    public $host = '';
+    public $wwwroot = '';
+    public $username = '';
+    public $password = '';
 }
