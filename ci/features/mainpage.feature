@@ -9,3 +9,8 @@ Feature: SamsonPHP test feature
 
   Scenario:
     Then I should see "This is main page view"
+    
+  Scenario:
+    And I am on "/pagethatdoesnotexists"
+    Then I should see "E404 - Page not found"
+    
