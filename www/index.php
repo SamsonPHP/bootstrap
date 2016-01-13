@@ -18,7 +18,6 @@ setlocales('ru');
 s()
     ->environment(getenv('APPLICATION_ENV') ? getenv('APPLICATION_ENV') : null)
     ->composer()                                        // Load configuration from composer.json
-    ->subscribe('core.routing', array(url(), 'router')) // Use default SamsonPHP URL router
     ->subscribe('core.e404', 'e404__handler')               // Set e404 error handler
     ->load('../src/main')                               // Load main module
     ->start('main');                                    // Start framework
