@@ -14,6 +14,7 @@
     "samsonos/php_less": "*",
     "samsonos/php_compressor": "*",
     "samsonphp/deploy": "*",
+    "samsonphp/router": "*",
     "samsonos/js_core": "*",
     "samsonos/php_optimage": "*",
     "samsonos/cms_api": "*",
