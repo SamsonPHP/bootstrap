@@ -25,39 +25,6 @@ build:
         background: true
       # run migrations for now only http requests
       - wget http://test.local
-      - wget http://test.local
-      - wget http://test.local
-      - wget http://test.local
-      - wget http://test.local
-      - wget http://test.local
-      - wget http://test.local
-      - wget http://test.local
-      - wget http://test.local
-      - wget http://test.local
-      - wget http://test.local
-      - wget http://test.local
-      - wget http://test.local
-      - wget http://test.local
-      - wget http://test.local
-      - wget http://test.local
-      - wget http://test.local
-      - wget http://test.local
-      - wget http://test.local
-      - wget http://test.local
-      - wget http://test.local
-      - wget http://test.local
-      - wget http://test.local
-      - wget http://test.local
-      - wget http://test.local
-      - wget http://test.local
-      - wget http://test.local
-      - wget http://test.local
-      - wget http://test.local
-      - wget http://test.local
-      - wget http://test.local
-      - wget http://test.local
-      - wget http://test.local
-      - wget http://test.local
 
   dependencies:
     before:
@@ -70,7 +37,8 @@ build:
 
   environment:
     php:
-      version: 5.5
+      version: 5.6
+    mysql: 5.6
     variables:
         APPLICATION_ENV: test
     hosts:
