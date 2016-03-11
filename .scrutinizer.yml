@@ -3,7 +3,7 @@ tools:
     php_pdepend: true
     php_analyzer: true
     # comment line below if this is paid scrutinizer project
-    external_code_coverage: true
+    #external_code_coverage: true
     php_cs_fixer:
             config: { level: psr2 } # or psr1 if you would just like to get fixes for PSR1
     php_code_sniffer:
@@ -24,21 +24,23 @@ build:
         command: 'phantomjs --webdriver=8643'
         background: true
       # run migrations for now only http requests
-      - wget http://test.local
+      - wget -O - http://test.local
+      - wget -O - http://test.local
 
   dependencies:
     before:
       # Uncomment below to create database and user "test"
-       #- gunzip test.sql.gz
-       - mysql -uroot -e "CREATE DATABASE test"
-       #- mysql -uroot test < test.sql
+       - gunzip atcasino.sql.gz
        - mysql -uroot -e "CREATE USER 'test'@'localhost' IDENTIFIED BY 'test'";
        - mysql -uroot -e "GRANT ALL PRIVILEGES ON *.* TO 'test'@'localhost' WITH GRANT OPTION";
+       - mysql -uroot -e "CREATE DATABASE test"
+       - mysql -uroot test < atcasino.sql
 
   environment:
     php:
       version: 5.6
     mysql: 5.6
+    selenium: true
     variables:
         APPLICATION_ENV: test
     hosts:
@@ -54,6 +56,8 @@ build:
 
   tests:
     override:
-      - 'vendor/bin/behat -p ci'
+      -
+        command: 'vendor/bin/behat -p scrutinizer-ci'
+        idle_timeout: 600
       #- 'vendor/bin/phpunit --coverage-clover=coverage.clover --coverage-text'
 
