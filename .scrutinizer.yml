@@ -54,6 +54,6 @@ build:
 
   tests:
     override:
-      - 'vendor/bin/behat -p test'
+      - 'vendor/bin/behat -p ci'
       #- 'vendor/bin/phpunit --coverage-clover=coverage.clover --coverage-text'
 
