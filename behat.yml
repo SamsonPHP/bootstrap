@@ -11,18 +11,20 @@ default:
   extensions:
     Behat\MinkExtension:
       base_url: 'http://test.local'
+      show_auto: true
+      show_cmd: 'chrome %s'
+      files_path: 'ci/features/bootstrap/images/'
       sessions:
         default:
           selenium2:
-            browser: phantomjs
+            browser: "chrome"
+            wd_host: "http://localhost:4444/wd/hub"
+        phantomjs:
+          selenium2:
             wd_host: "http://localhost:8643/wd/hub"
+            browser: phantomjs
 
 local:
   extensions:
       Behat\MinkExtension:
-        base_url: 'http://egorov.test.local'
-
-test:
-  extensions:
-      Behat\MinkExtension:
-        base_url: 'http://test.local'
+        base_url: 'http://yourproject.local'
