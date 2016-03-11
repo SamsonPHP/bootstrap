@@ -9,7 +9,7 @@ default:
       paths:
         - %paths.base%/ci/features
 
-ci:
+scrutinizer-ci:
   extensions:
     Behat\MinkExtension:
       base_url: 'http://test.local'
@@ -25,6 +25,17 @@ ci:
           selenium2:
             wd_host: "http://localhost:8643/wd/hub"
             browser: phantomjs
+
+travis-ci:
+  extensions:
+      Behat\MinkExtension:
+        base_url: 'http://test.local'
+        files_path: 'ci/features/bootstrap/images/'
+        sessions:
+          default:
+            selenium2:
+              browser: phantomjs
+              wd_host: "http://localhost:8643/wd/hub"
 
 local:
   extensions:
