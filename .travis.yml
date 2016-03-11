@@ -112,7 +112,7 @@ before_script:
 
 script:
  - vendor/bin/phpunit --coverage-clover=coverage.clover --coverage-text
- - vendor/bin/behat -p test
+ - vendor/bin/behat -p ci
 
 after_failure:
   - sudo tail /var/log/apache2/error.log
