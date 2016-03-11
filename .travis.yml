@@ -9,9 +9,6 @@ before_cache:
   - sudo rm -f vendor/samson*
 
 php:
-  - 5.3
-  - 5.4
-  - 5.5
   - 5.6
   - hhvm
   #- 7
@@ -65,8 +62,8 @@ before_script:
   - mysql -uroot -e "CREATE USER 'test'@'localhost' IDENTIFIED BY 'test'";
   - mysql -uroot -e "GRANT ALL PRIVILEGES ON *.* TO 'test'@'localhost' WITH GRANT OPTION";
   # import mysql data needed for tests
-  #- gunzip test.sql.gz
-  #- mysql -uroot test < test.sql
+  - gunzip atcasino.sql.gz
+  - mysql -uroot test < atcasino.sql
 
   # Start phantomjs
   - phantomjs --webdriver=8643 &
@@ -76,43 +73,10 @@ before_script:
   # run migrations
   # run migrations
   - wget http://test.local
-  - wget http://test.local
-  - wget http://test.local
-  - wget http://test.local
-  - wget http://test.local
-  - wget http://test.local
-  - wget http://test.local
-  - wget http://test.local
-  - wget http://test.local
-  - wget http://test.local
-  - wget http://test.local
-  - wget http://test.local
-  - wget http://test.local
-  - wget http://test.local
-  - wget http://test.local
-  - wget http://test.local
-  - wget http://test.local
-  - wget http://test.local
-  - wget http://test.local
-  - wget http://test.local
-  - wget http://test.local
-  - wget http://test.local
-  - wget http://test.local
-  - wget http://test.local
-  - wget http://test.local
-  - wget http://test.local
-  - wget http://test.local
-  - wget http://test.local
-  - wget http://test.local
-  - wget http://test.local
-  - wget http://test.local
-  - wget http://test.local
-  - wget http://test.local
-  - wget http://test.local
 
 script:
  - vendor/bin/phpunit --coverage-clover=coverage.clover --coverage-text
- - vendor/bin/behat -p ci
+ - vendor/bin/behat -p travis-ci
 
 after_failure:
   - sudo tail /var/log/apache2/error.log
