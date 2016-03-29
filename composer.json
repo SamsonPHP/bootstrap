@@ -28,15 +28,15 @@
     "behat/mink-selenium2-driver": "@stable"
   },
   "autoload": {
-    "classmap": ["src/"]
+    "classmap": ["src/", "www/cache/"]
   },
   "scripts": {
-    "post-install-cmd": [
+    "pre-install-cmd": [
       "rm -rf www/cache",
       "mkdir -p www/cache",
       "chmod 0777 www/cache"
     ],
-    "post-update-cmd": [
+    "pre-update-cmd": [
       "rm -rf www/cache",
       "mkdir -p www/cache",
       "chmod 0777 www/cache"
