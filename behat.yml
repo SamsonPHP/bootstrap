@@ -2,53 +2,36 @@
 default:
   autoload:
     '': %paths.base%/ci/features/bootstrap
-  translation:
-    locale: en
   suites:
     default:
       paths:
         - %paths.base%/ci/features
-
-scrutinizer-ci:
+  translation:
+    locale: en
   extensions:
     Behat\MinkExtension:
-      base_url: 'http://test.local'
-      show_auto: true
-      show_cmd: 'google-chrome %s'
-      files_path: 'ci/features/bootstrap/images/'
+      files_path: %paths.base%/ci/features/bootstrap/images/
+      base_url: '[local_domain]'
       sessions:
         default:
           selenium2:
-            browser: "google-chrome"
-            wd_host: "http://localhost:4444/wd/hub"
+            browser: "chrome"
+            wd_host: "http://192.168.88.99:4444/wd/hub"
         phantomjs:
           selenium2:
-            wd_host: "http://localhost:8643/wd/hub"
             browser: phantomjs
+            wd_host: "http://192.168.88.99:8364/wd/hub"
 
-travis-ci:
+scrutinizer:
   extensions:
       Behat\MinkExtension:
         base_url: 'http://test.local'
-        files_path: 'ci/features/bootstrap/images/'
         sessions:
           default:
             selenium2:
-              browser: phantomjs
-              wd_host: "http://localhost:8643/wd/hub"
-
-local:
-  extensions:
-    Behat\MinkExtension:
-      show_auto: truea
-      show_cmd: 'chrome %s'
-      files_path: 'Z:\atcasino.local\ci\features\bootstrap\images\'
-      base_url: 'http://klimenko.atcasino.local/'
-      sessions:
-        default:
-          selenium2:
-            wd_host: "http://192.168.88.112:5555/wd/hub"
-            browser: "chrome"
-        sauce_labs:
-          sauce_labs: ~
-
+              browser: "chrome"
+              wd_host: "http://localhost:4444/wd/hub"
+          phantomjs:
+            selenium2:
+              browser: "phantomjs"
+              wd_host: "http://localhost:8364/wd/hub"
