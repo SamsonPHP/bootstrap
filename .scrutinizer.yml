@@ -1,55 +1,61 @@
 tools:
-  php_sim: true
-  php_pdepend: true
-  php_mess_detector: true
-  php_analyzer: true
-  sensiolabs_security_checker: true
-  php_cs_fixer:
-    config: { level: psr2 } # or psr1 if you would just like to get fixes for PSR1
-  php_code_sniffer:
-    config:
-      standard: "PSR2"
+    php_sim: true
+    php_pdepend: true
+    php_analyzer: true
+    # comment line below if this is paid scrutinizer project
+    #external_code_coverage: true
+    php_cs_fixer:
+            config: { level: psr2 } # or psr1 if you would just like to get fixes for PSR1
+    php_code_sniffer:
+            config:
+                standard: "PSR2"
 
 filter:
-  excluded_paths:
-    - 'tests/*'
-    - 'app/*'
-    - 'features/*'
+    excluded_paths:
+        - 'ci/*'
+        - 'tests/*'
+        - 'fixtures/*'
+        - 'features/*'
 
 build:
   project_setup:
     before:
-      - command: 'phantomjs2 --webdriver=8643'
-        background: true                  
-      - php app/console  assetic:dump --env=test
-      - chmod -R 777 app/cache app/logs
+      -
+        command: 'phantomjs --webdriver=8643'
+        background: true
+      # run migrations for now only http requests
+      - wget http://test.local
+
   dependencies:
-    override:
-       - mysql -uroot -e 'CREATE DATABASE omnivalor_test'
-       - mysql -uroot -e "CREATE USER 'symfony'@'localhost' IDENTIFIED BY ''";
-       - mysql -uroot -e "GRANT ALL PRIVILEGES ON *.* TO 'symfony'@'localhost' WITH GRANT OPTION";
-       #- gunzip db.sql.gz
-       #- mysql -uroot symfony < db.sql
-       - composer install --no-interaction 
-       - mysql -uroot -e 'DROP DATABASE omnivalor_test'
-       - php app/console doctrine:database:create
-       - php app/console doctrine:schema:create       
+    before:
+      # Uncomment below to create database and user "test"
+       - gunzip dump.sql.gz
+       - mysql -uroot -e "CREATE DATABASE test"
+       - mysql -uroot test < dump.sql
+       - mysql -uroot -e "CREATE USER 'test'@'localhost' IDENTIFIED BY 'test'";
+       - mysql -uroot -e "GRANT ALL PRIVILEGES ON *.* TO 'test'@'localhost' WITH GRANT OPTION";
 
   environment:
     php:
-      version: 5.6
-    variables:
-        APPLICATION_ENV: scrutinizer
-    hosts:
-      omnivalor.local: '127.0.0.1'
+      version: 5.5
     selenium: true
+    mysql: 5.6
+    variables:
+        APPLICATION_ENV: test
+    hosts:
+      # change to your actual testing domain
+      test.local: '127.0.0.1'
     apache2:
       modules: ['rewrite']
       sites:
-        samsoncms:
+        test:
           web_root: 'www/'
-          host: 'omnivalor.local/app_test.php'
+          # change to your actual testing domain
+          host: 'test.local'
 
   tests:
     override:
       - 'vendor/bin/behat -p scrutinizer'
+      - 'mv Fail.*.jpg ~/artifacts/ 2>/dev/null'
+      #- 'vendor/bin/phpunit --coverage-clover=coverage.clover --coverage-text'
+
