@@ -10,7 +10,6 @@
   "require-dev": {
     "samsonos/php_core": "*",
     "samsonos/php_resourcer": "*",
-    "samsonos/php_activerecord": "*",
     "samsonos/php_less": "*",
     "samsonos/php_compressor": "*",
     "samsonos/js_core": "*",
@@ -18,8 +17,6 @@
     "samsonphp/router": "*",
     "samsonos/php_optimage": "*",
     "samsonos/php_minify": "*",
-    "samsonos/cms_api": "*",
-    "samsonos/seo_sitemap": "*",
     "samsonos/php_i18n": "*",
     "phpunit/phpunit": "4.*",
     "behat/behat": "3.*@stable",
@@ -41,5 +38,8 @@
       "mkdir -p www/cache",
       "chmod 0777 www/cache"
     ]
+  },
+  "require": {
+    "samsonphp/view": "dev-master"
   }
 }
