@@ -57,5 +57,5 @@ build:
     override:
       - 'vendor/bin/behat -p scrutinizer'
       - 'mv Fail.*.jpg ~/artifacts/ 2>/dev/null'
-      #- 'vendor/bin/phpunit --coverage-clover=coverage.clover --coverage-text'
+      - 'vendor/bin/phpunit --coverage-clover=coverage.clover --coverage-text'
 
