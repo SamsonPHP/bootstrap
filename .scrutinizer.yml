@@ -29,11 +29,11 @@ build:
   dependencies:
     before:
       # Uncomment below to create database and user "test"
-       - gunzip dump.sql.gz
-       - mysql -uroot -e "CREATE DATABASE test"
-       - mysql -uroot test < dump.sql
-       - mysql -uroot -e "CREATE USER 'test'@'localhost' IDENTIFIED BY 'test'";
-       - mysql -uroot -e "GRANT ALL PRIVILEGES ON *.* TO 'test'@'localhost' WITH GRANT OPTION";
+      # - gunzip dump.sql.gz
+      # - mysql -uroot -e "CREATE DATABASE test"
+      # - mysql -uroot test < dump.sql
+      # - mysql -uroot -e "CREATE USER 'test'@'localhost' IDENTIFIED BY 'test'";
+      # - mysql -uroot -e "GRANT ALL PRIVILEGES ON *.* TO 'test'@'localhost' WITH GRANT OPTION";
 
   environment:
     php:

@@ -8,9 +8,9 @@
   "licence": "Open Software License (OSL) v 3.0",
   "minimum-stability": "dev",
   "require-dev": {
+    "samsonphp/less": "*",
     "samsonos/php_core": "*",
     "samsonos/php_resourcer": "*",
-    "samsonphp/less": "*",
     "samsonos/php_compressor": "*",
     "samsonos/js_core": "*",
     "samsonphp/deploy": "*",
