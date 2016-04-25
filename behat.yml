@@ -15,12 +15,12 @@ default:
       sessions:
         default:
           selenium2:
-            browser: "chrome"
+            browser: "chromebrowser"
             wd_host: "http://192.168.88.99:4444/wd/hub"
         phantomjs:
           selenium2:
-            browser: phantomjs
-            wd_host: "http://192.168.88.99:8364/wd/hub"
+            browser: "phantomjs"
+            wd_host: "http://192.168.88.99:8643/wd/hub"
 
 ci:
   extensions:
@@ -29,9 +29,13 @@ ci:
         sessions:
           default:
             selenium2:
-              browser: "chrome"
-              wd_host: "http://localhost:4444/wd/hub"
-          phantomjs:
-            selenium2:
               browser: "phantomjs"
-              wd_host: "http://localhost:8364/wd/hub"
+              wd_host: "http://localhost:8643/wd/hub"
+          chrome:
+            selenium2:
+              browser: "chromebrowser"
+              wd_host: "http://localhost:4444/wd/hub"
+          firefox:
+            selenium2:
+              browser: "firefox"
+              wd_host: "http://localhost:4444/wd/hub"
