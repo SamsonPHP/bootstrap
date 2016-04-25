@@ -10,7 +10,7 @@
   "require-dev": {
     "samsonos/php_core": "*",
     "samsonos/php_resourcer": "*",
-    "samsonos/php_less": "*",
+    "samsonphp/less": "*",
     "samsonos/php_compressor": "*",
     "samsonos/js_core": "*",
     "samsonphp/deploy": "*",
