@@ -12,12 +12,12 @@
     "samsonphp/view": "*",
     "samsonphp/router": "*",
     "samsonphp/deploy": "*",
+    "samsonphp/minify": "*",
     "samsonos/php_core": "*",
     "samsonos/php_resourcer": "*",
     "samsonos/php_compressor": "*",
     "samsonos/js_core": "*",
     "samsonos/php_optimage": "*",
-    "samsonos/php_minify": "*",
     "samsonos/php_i18n": "*",
     "phpunit/phpunit": "4.*",
     "behat/behat": "3.*@stable",
@@ -39,8 +39,5 @@
       "mkdir -p www/cache",
       "chmod 0777 www/cache"
     ]
-  },
-  "require": {
-    "samsonphp/view": "dev-master"
   }
 }
