@@ -4,5 +4,4 @@ www/cms/cache/*
 www/cms/upload/* 
 www/cache/*
 www/upload/*
-composer.lock
 composer.phar
