@@ -12,7 +12,6 @@
     "samsonphp/router": "*",
     "samsonphp/resource": "*",
     "samsonphp/deploy": "*",
-    "samsonphp/minify": "*",
     "samsonos/php_core": "*",
     "samsonos/php_compressor": "*",
     "samsonos/js_core": "*",
