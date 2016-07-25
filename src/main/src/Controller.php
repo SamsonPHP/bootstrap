@@ -15,6 +15,6 @@ class Controller extends CompressableExternalModule
     /** Universal main controller action */
     public function __handler()
     {
-        $this->view('index')->title('Main page');
+        $this->html((new \view\main\IndexView())->output())->title('Main page');
     }
 }
