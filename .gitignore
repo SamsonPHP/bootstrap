@@ -1,5 +1,6 @@
 .idea*
 vendor/*
+app/config/*
 www/cms/cache/*
 www/cms/upload/* 
 www/cache/*
